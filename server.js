@@ -2,6 +2,9 @@ console.log("my node in express");
 const express = require("express");
 const dotenv = require("dotenv").config();
 const ErrorHandler = require("./middlewares/errorHandler");
+const connectDb = require("./config/dbConnection");
+
+connectDb();
 
 const app = express();
 
